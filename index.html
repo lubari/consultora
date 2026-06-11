@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EP - Consultora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#inicio" class="logo"><span>EP</span>Consultora</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#obras">Obras</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <!-- Cambiar src a images/hero.jpg cuando tengas la imagen -->
+    <figure class="img-block img-block--hero">
+      <img src="images/hero.svg" alt="Consultora - soluciones profesionales">
+    </figure>
+    <div class="hero-content">
+      <h1>Soluciones profesionales a tu medida</h1>
+      <p>Consultoría especializada con años de experiencia en proyectos de calidad.</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Quiénes somos</h2>
+    <div class="about-grid">
+      <div>
+        <p>Somos un estudio de consultoría integrado por profesionales de diversas disciplinas de la arquitectura e ingeniería, con más de 40 años de experiencia acumulada en variadas actividades económicas. Siguiendo la tesis de las 10.000 horas, quienes cuentan con esa cantidad de práctica pueden considerarse expertos.</p>
+        <p>Nos destacamos en el mercado por brindar un excelente asesoramiento y convertirnos en un socio estratégico para resolver problemas técnicos y reglamentarios, acompañando en los proyectos y realizaciones materiales de empresas, industrias, estudios de arquitectura e ingeniería, y a todos aquellos que desarrollan su actividad económica o comercial, sin importar su ubicación en el país.</p>
+      </div>
+      <!-- Cambiar src a images/nosotros/equipo.jpg cuando tengas la imagen -->
+      <figure class="img-block img-block--about">
+        <img src="images/nosotros/nosotros.png" alt="Equipo de Consultora" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="inner">
+      <h2>Servicios</h2>
+      <p class="subtitle">Lo que podemos hacer por ti</p>
+      <div class="services-list">
+        <article class="service-item">
+          <figure class="img-block img-block--service">
+            <img src="images/servicios/diseno.png" alt="Diseño arquitectónico" loading="lazy">
+          </figure>
+          <div class="service-item-body">
+            <h3>Diseño</h3>
+            <p>En arquitectura, el diseño no es solo una etapa inicial, sino un momento clave donde las ideas, necesidades y el estilo de operación empresarial se convierten en espacios reales. A través de una escucha atenta y un diálogo constante, buscamos comprender a fondo las inquietudes y dinámicas de cada empresa para potenciar al máximo la calidad del proyecto.</p>
+            <p>Exploramos múltiples posibilidades hasta encontrar la propuesta ideal, aquella que combine funcionalidad, estética y personalidad corporativa. Nuestro objetivo es que cada rincón del espacio refleje la identidad de la actividad, y que el resultado final no solo cumpla con lo esperado, sino que lo trascienda.</p>
+          </div>
+        </article>
+        <article class="service-item">
+          <figure class="img-block img-block--service">
+            <img src="images/servicios/direccion-obra.png" alt="Dirección de obra" loading="lazy">
+          </figure>
+          <div class="service-item-body">
+            <h3>Dirección de Obra</h3>
+            <p>La dirección de obra es un rol fundamental que garantiza que el proyecto se materialice tal como fue concebido y, en caso necesario, que las modificaciones respeten el espíritu corporativo.</p>
+            <p>Coordinamos equipos, resolvemos imprevistos y cuidamos cada decisión constructiva, para que el resultado final refleje no solo el diseño original, sino también las reglas del buen arte de construir.</p>
+          </div>
+        </article>
+        <article class="service-item">
+          <figure class="img-block img-block--service">
+            <img src="images/servicios/construccion.png" alt="Construcción de obras civiles" loading="lazy">
+          </figure>
+          <div class="service-item-body">
+            <h3>Construcción</h3>
+            <p>Contamos con experiencia en la construcción de obras civiles y sus instalaciones, brindando un servicio que combina solidez técnica, gestión eficiente y compromiso total. Nos ocupamos de cada etapa del proceso constructivo, desde la planificación hasta la entrega final.</p>
+            <p>Nuestro objetivo es lograr una construcción de excelente calidad, optimizando los costos y cumpliendo rigurosamente los plazos pactados. Todo esto, bajo un estricto cumplimiento de normas de seguridad e higiene, porque entendemos que construir bien no es solo levantar estructuras, sino generar confianza, previsibilidad y resultados duraderos.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="obras">
+    <h2>Obras</h2>
+    <p class="subtitle">Algunos de nuestros proyectos realizados</p>
+    <div class="works-grid">
+      <article class="work-card">
+        <figure class="img-block img-block--work">
+          <img src="images/obras/proyecto-1.svg" alt="Proyecto Residencial" loading="lazy">
+        </figure>
+        <div class="info">
+          <h3>Proyecto Residencial</h3>
+          <p>Construcción y supervisión de vivienda unifamiliar.</p>
+        </div>
+      </article>
+      <article class="work-card">
+        <figure class="img-block img-block--work">
+          <img src="images/obras/proyecto-2.svg" alt="Edificio Comercial" loading="lazy">
+        </figure>
+        <div class="info">
+          <h3>Edificio Comercial</h3>
+          <p>Consultoría integral para centro comercial de 3 niveles.</p>
+        </div>
+      </article>
+      <article class="work-card">
+        <figure class="img-block img-block--work">
+          <img src="images/obras/proyecto-3.svg" alt="Infraestructura urbana" loading="lazy">
+        </figure>
+        <div class="info">
+          <h3>Infraestructura urbana</h3>
+          <p>Asesoría en obra pública de pavimentación y drenaje.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="inner">
+      <h2>Contacto</h2>
+      <p class="subtitle">Estamos listos para escucharte</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Email:</strong> info@epconsultora.com</p>
+          <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+          <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje!');">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Consultora. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a365d"/>
+  <rect x="80" y="80" width="1760" height="920" rx="16" fill="#2c5282" opacity="0.5"/>
+  <text x="960" y="520" text-anchor="middle" fill="#c9a227" font-family="sans-serif" font-size="48" font-weight="600">images/hero.jpg</text>
+  <text x="960" y="580" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="24" opacity="0.7">Reemplazar con imagen de portada (1920×1080)</text>
+</svg>
