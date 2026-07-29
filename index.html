@@ -1,222 +1,424 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EP - Consultora</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-  <header>
-    <nav>
-      <a href="#inicio" class="logo"><span>EP</span>Consultora</a>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>EP Consultora - Soluciones Profesionales</title>
+  <link rel="icon" type="image/png"
+    href="https://lh3.googleusercontent.com/aida-public/AB6AXuDioTuI1oyFswpwus7_EQdW_54sDL_764oVjkr7A9hpzo4yJLipV3Sry_Q42C__nyXKnNXtT2Nqa6HjxWubM6eIVmYZfVE_fMlhpGCuWuHxsIbZc0HW_46iDkNbDC1smfFo4U7YO4qFhYpGKTgDufxBdw0UiYATel9TGEZAIFTihfKS7Qsj87MHZ9JxNfqXXINQm4so3XNBPrj2942z6JHy55O9Y5uwBbTtCmSkxo5dMmyZMAR3jJBFkAn-bmkmL7qxz7Q27AjWF3Y" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Manrope:wght@600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body
+  class="bg-background text-on-background font-body-md antialiased selection:bg-warm-sand selection:text-stark-white">
+  <!-- TopNavBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-stark-white transition-all duration-200 ease-in-out border-b border-surface-variant">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-page h-20">
+      <a class="flex-shrink-0 flex items-center gap-2 group" href="#">
+        <img alt="EP Consultora Logo" class="h-10 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioTuI1oyFswpwus7_EQdW_54sDL_764oVjkr7A9hpzo4yJLipV3Sry_Q42C__nyXKnNXtT2Nqa6HjxWubM6eIVmYZfVE_fMlhpGCuWuHxsIbZc0HW_46iDkNbDC1smfFo4U7YO4qFhYpGKTgDufxBdw0UiYATel9TGEZAIFTihfKS7Qsj87MHZ9JxNfqXXINQm4so3XNBPrj2942z6JHy55O9Y5uwBbTtCmSkxo5dMmyZMAR3jJBFkAn-bmkmL7qxz7Q27AjWF3Y" />
+      </a>
+      <nav aria-label="Main Navigation" class="hidden md:flex gap-8 items-center">
+        <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+          href="#trayectoria">Trayectoria</a>
+        <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+          href="#servicios">Servicios</a>
+        <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+          href="#clientes">Clientes</a>
+        <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+          href="#proyectos">Proyectos</a>
+        <a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+          href="#contacto">Contacto</a>
+      </nav>
+      <div class="hidden md:flex">
+        <a class="bg-deep-onyx text-stark-white px-6 py-3 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-tertiary transition-colors duration-300"
+          href="#contacto">
+          Consultar Ahora
+        </a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button aria-label="Open menu" class="md:hidden text-deep-onyx p-2" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
       </button>
-      <ul class="nav-links">
-        <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <!-- <li><a href="#obras">Obras</a></li> -->
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    </div>
   </header>
 
-  <section id="inicio" class="hero">
-    <!-- Cambiar src a images/hero.jpg cuando tengas la imagen -->
-    <figure class="img-block img-block--hero">
-      <img src="images/hero.svg" alt="Consultora - soluciones profesionales">
-    </figure>
-    <div class="hero-content">
-      <h1>Soluciones profesionales a tu medida</h1>
-      <p>Consultoría especializada con años de experiencia en proyectos de calidad.</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu"
+    class="fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-stark-white shadow-xl pt-24 px-6 flex flex-col gap-6 md:hidden transition-transform duration-300 transform translate-x-full border-l border-surface-variant">
+    <nav class="flex flex-col gap-6">
+      <a class="mobile-nav-link font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+        href="#trayectoria">Trayectoria</a>
+      <a class="mobile-nav-link font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+        href="#servicios">Servicios</a>
+      <a class="mobile-nav-link font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+        href="#clientes">Clientes</a>
+      <a class="mobile-nav-link font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+        href="#proyectos">Proyectos</a>
+      <a class="mobile-nav-link font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-warm-sand transition-colors duration-300"
+        href="#contacto">Contacto</a>
+    </nav>
+    <div class="mt-4 pt-6 border-t border-surface-variant">
+      <a class="mobile-nav-link block text-center bg-deep-onyx text-stark-white px-6 py-3 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-tertiary transition-colors duration-300"
+        href="#contacto">
+        Consultar Ahora
+      </a>
     </div>
-  </section>
+  </div>
 
-  <section id="nosotros">
-    <h2>Nosotros</h2>
-    <div class="about-grid">
-      <div>
-        <p>Somos un <strong>estudio de consultoría</strong> integrado por profesionales de diversas disciplinas de la arquitectura e ingeniería, con más de <strong>40 años de experiencia</strong> acumulada en variadas actividades económicas. Siguiendo la tesis de las 10.000 horas, quienes cuentan con esa cantidad de práctica pueden considerarse expertos.</p>
-        <p>Nos destacamos en el mercado por brindar un <strong>excelente asesoramiento</strong> y convertirnos en un socio estratégico para resolver problemas técnicos y reglamentarios, acompañando en los proyectos y realizaciones materiales de empresas, industrias, estudios de arquitectura e ingeniería, y a todos aquellos que desarrollan su actividad económica o comercial, sin importar su ubicación en el país.</p>
+  <main class="pt-20">
+    <!-- 1. Hero Section -->
+    <section class="relative h-[calc(100vh-5rem)] min-h-[600px] flex items-center">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-cover bg-center w-full h-full" style="background-image: url('images/hero-image.jpg')"></div>
+        <div class="absolute inset-0 bg-black/45"></div>
       </div>
-      <figure class="img-block img-block--about">
-        <img src="images/nosotros/nosotros.png" alt="Equipo de Consultora" loading="lazy">
-      </figure>
-    </div>
-  </section>
-
-  <section id="servicios">
-    <div class="inner">
-      <h2>Servicios</h2>
-      <p class="subtitle">Lo que podemos hacer por ti</p>
-      <div class="services-list">
-        <article class="service-item">
-          <figure class="img-block img-block--service">
-            <img src="images/servicios/diseno.png" alt="Diseño arquitectónico" loading="lazy">
-          </figure>
-          <div class="service-item-body">
-            <h3>Diseño</h3>
-            <p>En arquitectura, el diseño no es solo una etapa inicial, sino un momento clave donde las ideas, necesidades y el estilo de operación empresarial se convierten en espacios reales. A través de una escucha atenta y un diálogo constante, buscamos comprender a fondo las inquietudes y dinámicas de cada empresa para potenciar al máximo la calidad del proyecto.</p>
-            <p>Exploramos múltiples posibilidades hasta encontrar la propuesta ideal, aquella que combine funcionalidad, estética y personalidad corporativa. Nuestro objetivo es que cada rincón del espacio refleje la identidad de la actividad, y que el resultado final no solo cumpla con lo esperado, sino que lo trascienda.</p>
+      <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-page">
+        <div class="max-w-3xl">
+          <h1
+            class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-stark-white mb-stack-lg">
+            Soluciones profesionales a tu medida
+          </h1>
+          <p class="font-body-lg text-body-lg text-surface-container-low mb-8 max-w-xl">
+            Consultoría especializada con años de experiencia en proyectos de calidad, acompañando el desarrollo de tu
+            empresa.
+          </p>
+          <a class="inline-flex items-center justify-center bg-warm-sand text-stark-white px-8 py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-[#857258] transition-colors duration-300 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)]"
+            href="#contacto">
+            Contáctanos
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- 2. Trayectoria (Nosotros) -->
+    <section class="py-section-gap bg-stark-white relative overflow-hidden" id="trayectoria">
+      <div class="max-w-container-max mx-auto px-margin-page">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div
+              class="relative bg-warm-sand p-8 md:p-12 rounded-DEFAULT shadow-[0_8px_30px_rgba(150,131,105,0.25)] flex items-center justify-center aspect-[4/5]">
+              <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary rounded-DEFAULT -z-10"></div>
+              <img alt="EP Consultora Logo" class="w-full h-full object-contain filter invert opacity-95"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioTuI1oyFswpwus7_EQdW_54sDL_764oVjkr7A9hpzo4yJLipV3Sry_Q42C__nyXKnNXtT2Nqa6HjxWubM6eIVmYZfVE_fMlhpGCuWuHxsIbZc0HW_46iDkNbDC1smfFo4U7YO4qFhYpGKTgDufxBdw0UiYATel9TGEZAIFTihfKS7Qsj87MHZ9JxNfqXXINQm4so3XNBPrj2942z6JHy55O9Y5uwBbTtCmSkxo5dMmyZMAR3jJBFkAn-bmkmL7qxz7Q27AjWF3Y" />
+            </div>
           </div>
-        </article>
-        <article class="service-item">
-          <figure class="img-block img-block--service">
-            <img src="images/servicios/direccion-obra.png" alt="Dirección de obra" loading="lazy">
-          </figure>
-          <div class="service-item-body">
-            <h3>Dirección de Obra</h3>
-            <p>La dirección de obra es un rol fundamental que garantiza que el proyecto se materialice tal como fue concebido y, en caso necesario, que las modificaciones respeten el espíritu corporativo.</p>
-            <p>Coordinamos equipos, resolvemos imprevistos y cuidamos cada decisión constructiva, para que el resultado final refleje no solo el diseño original, sino también las reglas del buen arte de construir.</p>
+          <div class="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 flex flex-col justify-center">
+            <span
+              class="font-label-sm text-label-sm text-warm-sand uppercase tracking-wider mb-stack-sm block">Trayectoria</span>
+            <h2 class="font-headline-lg text-headline-lg text-deep-onyx mb-stack-lg">
+              <span class="font-display-lg text-display-lg text-warm-sand block mb-2">40 años</span>
+              de excelencia en consultoría y construcción.
+            </h2>
+            <div class="font-body-md text-body-md text-on-surface-variant space-y-6">
+              <p>
+                Somos un estudio integrado por profesionales de diversas disciplinas de la arquitectura e ingeniería,
+                con extensa experiencia acumulada en variadas actividades económicas. Siguiendo la tesis de las 10.000
+                horas, nos consideramos expertos en materializar la visión de nuestros clientes.
+              </p>
+              <p>
+                Nos destacamos en el mercado por brindar un excelente asesoramiento y convertirnos en un socio
+                estratégico para resolver problemas técnicos y reglamentarios, acompañando en los proyectos y
+                realizaciones materiales de empresas, industrias y desarrolladores en todo el país.
+              </p>
+            </div>
           </div>
-        </article>
-        <article class="service-item">
-          <figure class="img-block img-block--service">
-            <img src="images/servicios/construccion.png" alt="Construcción de obras civiles" loading="lazy">
-          </figure>
-          <div class="service-item-body">
-            <h3>Construcción</h3>
-            <p>Contamos con experiencia en la construcción de obras civiles y sus instalaciones, brindando un servicio que combina solidez técnica, gestión eficiente y compromiso total. Nos ocupamos de cada etapa del proceso constructivo, desde la planificación hasta la entrega final.</p>
-            <p>Nuestro objetivo es lograr una construcción de excelente calidad, optimizando los costos y cumpliendo rigurosamente los plazos pactados. Todo esto, bajo un estricto cumplimiento de normas de seguridad e higiene, porque entendemos que construir bien no es solo levantar estructuras, sino generar confianza, previsibilidad y resultados duraderos.</p>
+        </div>
+      </div>
+    </section>
+    <!-- 3. Servicios -->
+    <section class="py-section-gap bg-linen-surface" id="servicios">
+      <div class="max-w-container-max mx-auto px-margin-page">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="font-label-sm text-label-sm text-warm-sand uppercase tracking-wider mb-stack-sm block">Servicios</span>
+          <h2 class="font-headline-lg text-headline-lg text-deep-onyx">Lo que podemos hacer por ti</h2>
+        </div>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+          <!-- Card 1: Diseño (Large) -->
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant lg:col-span-2 group hover:border-outline transition-all duration-300 flex flex-col overflow-hidden">
+            <div class="relative overflow-hidden h-64 w-full">
+              <img src="images/servicios/diseno.png" alt="Diseño"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-stack-lg flex-1 flex flex-col justify-between">
+              <div class="flex items-start justify-between mb-8">
+                <span class="material-symbols-outlined text-[40px] text-warm-sand font-light"
+                  data-icon="architecture">architecture</span>
+                <span
+                  class="bg-warm-sand/10 text-warm-sand font-label-sm text-label-sm px-3 py-1 rounded-DEFAULT uppercase tracking-wider">Fase
+                  Inicial</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-headline-md text-deep-onyx mb-stack-sm">Diseño</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                  El diseño no es solo una etapa, es donde las ideas y necesidades se convierten en espacios reales. A
+                  través de un diálogo constante, buscamos comprender la dinámica de tu empresa para potenciar la
+                  calidad
+                  del proyecto, combinando funcionalidad, estética y personalidad corporativa.
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- Card 2: Dirección -->
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant group hover:border-outline transition-all duration-300 flex flex-col overflow-hidden">
+            <div class="relative overflow-hidden h-64 w-full">
+              <img src="images/servicios/direccion-obra.png" alt="Dirección de Obra"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-stack-lg flex-1 flex flex-col justify-between">
+              <div class="mb-8">
+                <span class="material-symbols-outlined text-[32px] text-deep-onyx"
+                  data-icon="engineering">engineering</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-headline-md text-deep-onyx mb-stack-sm">Dirección de Obra</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Garantizamos que el proyecto se materialice tal como fue concebido. Coordinamos equipos, resolvemos
+                  imprevistos y cuidamos cada decisión constructiva según las reglas del buen arte.
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- Card 3: Construcción -->
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant md:col-span-2 lg:col-span-1 group hover:border-outline transition-all duration-300 flex flex-col overflow-hidden">
+            <div class="relative overflow-hidden h-64 w-full">
+              <img src="images/servicios/construccion.png" alt="Construcción" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-stack-lg flex-1 flex flex-col justify-between">
+              <div class="mb-8">
+                <span class="material-symbols-outlined text-[32px] text-deep-onyx"
+                  data-icon="construction">construction</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-headline-md text-deep-onyx mb-stack-sm">Construcción</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Solidez técnica, gestión eficiente y compromiso total. Nos ocupamos desde la planificación hasta la
+                  entrega, optimizando costos y cumpliendo plazos pactados bajo estrictas normas.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- 4. Clientes -->
+    <section class="py-section-gap bg-stark-white" id="clientes">
+      <div class="max-w-container-max mx-auto px-margin-page text-center">
+        <span
+          class="font-label-sm text-label-sm text-warm-sand uppercase tracking-wider mb-stack-sm block">Confianza</span>
+        <h2 class="font-headline-lg text-headline-lg text-deep-onyx mb-16">Organizaciones que nos eligen como socio
+          estratégico</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center">
+          <!-- Client Logos -->
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 1" src="images/clientes/empresa-1.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 2" src="images/clientes/empresa-2.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 3" src="images/clientes/empresa-3.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 4" src="images/clientes/empresa-4.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 5" src="images/clientes/empresa-5.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 6" src="images/clientes/empresa-6.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 7" src="images/clientes/empresa-7.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 8" src="images/clientes/empresa-8.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 9" src="images/clientes/empresa-9.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 10" src="images/clientes/empresa-10.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 11" src="images/clientes/empresa-11.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 12" src="images/clientes/empresa-12.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 13" src="images/clientes/empresa-13.png" />
+          <img class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 object-contain"
+            alt="Logo Cliente 14" src="images/clientes/empresa-14.png" />
+        </div>
+      </div>
+    </section>
+    <!-- 5. Proyectos -->
+    <section class="py-section-gap bg-linen-surface" id="proyectos">
+      <div class="max-w-container-max mx-auto px-margin-page">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="font-label-sm text-label-sm text-warm-sand uppercase tracking-wider mb-stack-sm block">Nuestro
+            Trabajo</span>
+          <h2 class="font-headline-lg text-headline-lg text-deep-onyx">Proyectos Destacados</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant group overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="project_office_building_1782501598322.png" alt="Torre Corporativa Nexus"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <span
+                class="text-warm-sand font-label-sm text-label-sm uppercase tracking-wider mb-2 block">Corporativo</span>
+              <h3 class="font-headline-md text-headline-md text-deep-onyx mb-4">Torre Corporativa Nexus</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Diseño y dirección de obra de un edificio
+                corporativo sustentable con certificación LEED, optimizando el uso de energía y luz natural.</p>
+            </div>
+          </article>
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant group overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="project_industrial_plant_1782501608480.png" alt="Planta Industrial AMTC"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <span
+                class="text-warm-sand font-label-sm text-label-sm uppercase tracking-wider mb-2 block">Industrial</span>
+              <h3 class="font-headline-md text-headline-md text-deep-onyx mb-4">Planta Industrial AMTC</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Ejecución integral de planta de manufactura
+                de alta tecnología. Planificación estructural y montaje de maquinarias pesadas.</p>
+            </div>
+          </article>
+          <article
+            class="bg-stark-white rounded-DEFAULT border border-surface-variant group overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="project_residential_1782501619104.png" alt="Complejo Residencial Vista Verde"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <span
+                class="text-warm-sand font-label-sm text-label-sm uppercase tracking-wider mb-2 block">Residencial</span>
+              <h3 class="font-headline-md text-headline-md text-deep-onyx mb-4">Complejo Vista Verde</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Desarrollo urbano de lujo integrando áreas
+                residenciales con espacios verdes extensivos, priorizando el confort y la calidad de vida.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- 6. Contacto -->
+    <section class="bg-deep-onyx py-section-gap" id="contacto">
+      <div class="max-w-container-max mx-auto px-margin-page">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-grid-gutter">
+          <!-- Contact Info -->
+          <div>
+            <span
+              class="font-label-sm text-label-sm text-warm-sand uppercase tracking-wider mb-stack-sm block">Contacto</span>
+            <h2 class="font-headline-lg text-headline-lg text-stark-white mb-stack-lg">Estamos listos para escucharte
+            </h2>
+            <p class="font-body-md text-body-md text-surface-container-high mb-8 max-w-md">
+              Da el primer paso hacia la excelencia en tu próximo proyecto. Nuestro equipo de consultores está
+              disponible para analizar tus requerimientos técnicos.
+            </p>
+            <div class="space-y-6 font-body-md text-body-md text-stark-white">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-warm-sand mt-1" data-icon="mail">mail</span>
+                <div>
+                  <span class="block text-surface-dim text-sm">Email</span>
+                  <a class="hover:text-warm-sand transition-colors"
+                    href="mailto:info@epconsultora.com">info@epconsultora.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-warm-sand mt-1" data-icon="call">call</span>
+                <div>
+                  <span class="block text-surface-dim text-sm">Teléfono</span>
+                  <a class="hover:text-warm-sand transition-colors" href="tel:+541152443345">+54 11 5244 3345</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-warm-sand mt-1" data-icon="location_on">location_on</span>
+                <div>
+                  <span class="block text-surface-dim text-sm">Ubicación</span>
+                  <span>Buenos Aires, Argentina</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
+          <!-- Contact Form -->
+          <div class="bg-tertiary p-stack-lg rounded-DEFAULT border border-surface-variant/20">
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label class="sr-only" for="name">Nombre completo</label>
+                <input
+                  class="w-full bg-transparent border-0 border-b border-surface-variant/30 text-stark-white placeholder:text-surface-dim focus:ring-0 focus:border-warm-sand py-3 px-0 font-body-md transition-colors"
+                  id="name" name="user_name" placeholder="Nombre completo" type="text" required />
+              </div>
+              <div>
+                <label class="sr-only" for="email">Correo electrónico</label>
+                <input
+                  class="w-full bg-transparent border-0 border-b border-surface-variant/30 text-stark-white placeholder:text-surface-dim focus:ring-0 focus:border-warm-sand py-3 px-0 font-body-md transition-colors"
+                  id="email" name="user_email" placeholder="Correo electrónico" type="email" required />
+              </div>
+              <div>
+                <label class="sr-only" for="empresa">Empresa</label>
+                <input
+                  class="w-full bg-transparent border-0 border-b border-surface-variant/30 text-stark-white placeholder:text-surface-dim focus:ring-0 focus:border-warm-sand py-3 px-0 font-body-md transition-colors"
+                  id="empresa" name="user_company" placeholder="Empresa (Opcional)" type="text" />
+              </div>
+              <div>
+                <label class="sr-only" for="message">Mensaje</label>
+                <textarea
+                  class="w-full bg-transparent border-0 border-b border-surface-variant/30 text-stark-white placeholder:text-surface-dim focus:ring-0 focus:border-warm-sand py-3 px-0 font-body-md transition-colors resize-none"
+                  id="message" name="message" placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+              </div>
+              <button
+                class="w-full bg-warm-sand text-stark-white py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-[#857258] transition-colors mt-4"
+                type="submit" id="submit-btn">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-deep-onyx w-full">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter max-w-container-max mx-auto px-margin-page py-16 items-center">
+      <div class="flex flex-col gap-6">
+        <img alt="EP Consultora Logo" class="h-12 w-auto object-contain self-start invert opacity-90"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioTuI1oyFswpwus7_EQdW_54sDL_764oVjkr7A9hpzo4yJLipV3Sry_Q42C__nyXKnNXtT2Nqa6HjxWubM6eIVmYZfVE_fMlhpGCuWuHxsIbZc0HW_46iDkNbDC1smfFo4U7YO4qFhYpGKTgDufxBdw0UiYATel9TGEZAIFTihfKS7Qsj87MHZ9JxNfqXXINQm4so3XNBPrj2942z6JHy55O9Y5uwBbTtCmSkxo5dMmyZMAR3jJBFkAn-bmkmL7qxz7Q27AjWF3Y" />
+        <p class="font-body-md text-body-md text-on-tertiary-container max-w-sm">
+          © 2026 EP Consultora. 40 años de excelencia en construcción y habilitaciones.
+        </p>
+      </div>
+      <div class="flex flex-col md:items-end gap-6">
+        <nav aria-label="Footer Navigation" class="flex flex-wrap gap-x-8 gap-y-4">
+          <a class="font-body-md text-body-md text-on-tertiary-container hover:text-stark-white transition-colors duration-200"
+            href="#">Aviso Legal</a>
+          <a class="font-body-md text-body-md text-on-tertiary-container hover:text-stark-white transition-colors duration-200"
+            href="#">Política de Privacidad</a>
+          <a class="font-body-md text-body-md text-on-tertiary-container hover:text-stark-white transition-colors duration-200"
+            href="#contacto">Contacto</a>
+          <a class="font-body-md text-body-md text-on-tertiary-container hover:text-stark-white transition-colors duration-200"
+            href="#">LinkedIn</a>
+        </nav>
       </div>
     </div>
-  </section>
-
-  <section id="clientes">
-    <h2>Empresas que confían en nosotros</h2>
-    <p class="subtitle">Organizaciones que nos eligen como socio estratégico</p>
-    <!--
-      Para agregar un ícono, duplicá un bloque <figure class="client-logo">:
-      1. Guardá el logo en images/clientes/ (PNG recomendado)
-      2. Copiá y pegá el bloque de abajo
-      3. Actualizá src y alt con el nombre de la empresa
-    -->
-    <div class="clients-grid">
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-1.png" alt="Empresa 1" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-2.png" alt="Empresa 2" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-3.png" alt="Empresa 3" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-4.png" alt="Empresa 4" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-5.png" alt="Empresa 5" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-6.png" alt="Empresa 6" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-8.png" alt="Empresa 7" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-9.png" alt="Empresa 7" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-10.png" alt="Empresa 7" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-11.png" alt="Empresa 7" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-12.png" alt="Empresa 7" loading="lazy">
-      </figure>
-      <figure class="client-logo">
-        <img src="images/clientes/empresa-13.png" alt="Empresa 7" loading="lazy">
-      </figure>
-    </div>
-  </section>
-
-  <!-- <section id="obras">
-    <h2>Obras</h2>
-    <p class="subtitle">Algunos de nuestros proyectos realizados</p>
-    <div class="works-grid">
-      <article class="work-card">
-        <figure class="img-block img-block--work">
-          <img src="images/obras/proyecto-1.svg" alt="Proyecto Residencial" loading="lazy">
-        </figure>
-        <div class="info">
-          <h3>Proyecto Residencial</h3>
-          <p>Construcción y supervisión de vivienda unifamiliar.</p>
-        </div>
-      </article>
-      <article class="work-card">
-        <figure class="img-block img-block--work">
-          <img src="images/obras/proyecto-2.svg" alt="Edificio Comercial" loading="lazy">
-        </figure>
-        <div class="info">
-          <h3>Edificio Comercial</h3>
-          <p>Consultoría integral para centro comercial de 3 niveles.</p>
-        </div>
-      </article>
-      <article class="work-card">
-        <figure class="img-block img-block--work">
-          <img src="images/obras/proyecto-3.svg" alt="Infraestructura urbana" loading="lazy">
-        </figure>
-        <div class="info">
-          <h3>Infraestructura urbana</h3>
-          <p>Asesoría en obra pública de pavimentación y drenaje.</p>
-        </div>
-      </article>
-    </div>
-  </section> -->
-
-  <section id="contacto">
-    <div class="inner">
-      <h2>Contacto</h2>
-      <p class="subtitle">Estamos listos para escucharte</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p><strong>Email:</strong> info@epconsultora.com</p>
-          <p><strong>Teléfono:</strong> +54 11 5244 3345</p>
-          <!-- <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p> -->
-        </div>
-        <!-- <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje!');">
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar mensaje</button>
-        </form> -->
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 EP Consultora. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links a');
-
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
-  </script>
-
 </body>
+
 </html>
